@@ -13,7 +13,8 @@ public class LoginTest {
 	@BeforeMethod
 	public void init() {
 		wd = new ChromeDriver();
-		wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
+		wd.navigate().to("https://telranedu.web.app/contacts");
+
 	}
 	
 	@Test
@@ -26,17 +27,19 @@ public class LoginTest {
 		WebElement emailInput = wd.findElement(By.xpath("//input[1]"));
 		emailInput.click();
 		emailInput.clear();
-		emailInput.sendKeys("roman@googooloo.com");
+		emailInput.sendKeys("rosh@list.ru");
 		
 		WebElement passInput = wd.findElement(By.xpath("//input[2]"));
 		passInput.click();
 		passInput.clear();
-		passInput.sendKeys("Abcd1234");
+		passInput.sendKeys("$ABcdef12345");
 		
 		
 		// click "login" button
 		wd.findElement(By.xpath("//button[1]")).click();
 		// assert
+//		Assert.assertTrue(wd.findElement(By.xpath("//a[@href='/add']"))!=null);
+
 	}
 	
 	@AfterMethod
